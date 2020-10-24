@@ -1,29 +1,10 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+The pantry wise app is a kitchen app that will allow users to enter their groceries into the app. The app 
+will also allow the user to search for recipes in a database by what groceries they have in their inventory. 
+User will be able to search for recipes even if they do not have the required items. The user will be able to 
+comment on recipes.
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Stephen Sparks    sdsparks@mnu.edu
+Metie Edessa      medessa@mnu.edu
+Steven Koehler    spkoehler@mnu.edu
