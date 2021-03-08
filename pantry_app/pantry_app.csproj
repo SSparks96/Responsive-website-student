@@ -179,7 +179,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Pages\Recipies.aspx" />
+    <Content Include="Pages\Recipes.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -198,7 +198,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
-    <Content Include="Pages\SuggestedRecipies.aspx" />
+    <Content Include="Pages\SuggestedRecipes.aspx" />
     <Content Include="Pages\GroceryList.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -353,12 +353,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Pages\Recipies.aspx.cs">
-      <DependentUpon>Recipies.aspx</DependentUpon>
+    <Compile Include="Pages\Recipes.aspx.cs">
+      <DependentUpon>Recipes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Recipies.aspx.designer.cs">
-      <DependentUpon>Recipies.aspx</DependentUpon>
+    <Compile Include="Pages\Recipes.aspx.designer.cs">
+      <DependentUpon>Recipes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -394,12 +394,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SuggestedRecipies.aspx.cs">
-      <DependentUpon>SuggestedRecipies.aspx</DependentUpon>
+    <Compile Include="Pages\SuggestedRecipes.aspx.cs">
+      <DependentUpon>SuggestedRecipes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\SuggestedRecipies.aspx.designer.cs">
-      <DependentUpon>SuggestedRecipies.aspx</DependentUpon>
+    <Compile Include="Pages\SuggestedRecipes.aspx.designer.cs">
+      <DependentUpon>SuggestedRecipes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\GroceryList.aspx.cs">
       <DependentUpon>GroceryList.aspx</DependentUpon>
