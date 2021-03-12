@@ -4,7 +4,7 @@
     <h1>Recipes</h1>
     <div>
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-5">
                 <asp:GridView ID="gvRecipes" runat="server"></asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
             </div>
