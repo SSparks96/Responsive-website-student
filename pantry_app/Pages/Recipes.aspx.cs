@@ -7,11 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace pantry_app
 {
-    public partial class Contact : Page
+    public partial class Recipes : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void gvRecipes_PreRender(object sender, EventArgs e)
         {
-
+            
         }
+    
+      
+    
+    
     }
 }
