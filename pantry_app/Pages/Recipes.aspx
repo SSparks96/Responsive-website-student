@@ -4,7 +4,7 @@
     <h1>Recipes</h1>
     <div>
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-5">
                 <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-responsive" >
                     <Columns>
                         <asp:CommandField ShowEditButton="True" />
