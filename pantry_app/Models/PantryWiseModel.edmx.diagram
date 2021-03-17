@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="PantryWiseModel.Inventory" Width="1.5" PointX="7.625" PointY="1.75" />
         <EntityTypeShape EntityType="PantryWiseModel.Ingredients" Width="1.5" PointX="3.125" PointY="4" />
         <EntityTypeShape EntityType="PantryWiseModel.Measurements" Width="1.5" PointX="5.875" PointY="4.5" />
+        <EntityTypeShape EntityType="PantryWiseModel.Recipes" Width="1.5" PointX="9.25" PointY="4.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
