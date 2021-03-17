@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="8dad4d7df7384371917178473b5fa91c" Name="Diagram1" >
         <EntityTypeShape EntityType="PantryWiseModel.PantryWiseUser" Width="1.5" PointX="5" PointY="1.125" />
+        <EntityTypeShape EntityType="PantryWiseModel.Security" Width="1.5" PointX="2.5" PointY="1.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

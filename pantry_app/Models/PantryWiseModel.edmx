@@ -13,6 +13,7 @@
       <Schema Namespace="PantryWiseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="PantryWise1Entities" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="PantryWiseUsers" EntityType="PantryWiseModel.PantryWiseUser" />
+          <EntitySet Name="Securities" EntityType="PantryWiseModel.Security" />
         </EntityContainer>
         <EntityType Name="PantryWiseUser">
           <Key>
@@ -26,6 +27,14 @@
           <Property Name="ZipCode" Type="String" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" Nullable="false" />
           <Property Name="Email" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Security">
+          <Key>
+            <PropertyRef Name="SecurityID" />
+          </Key>
+          <Property Name="SecurityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" />
+          <Property Name="PassWord" Type="String" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

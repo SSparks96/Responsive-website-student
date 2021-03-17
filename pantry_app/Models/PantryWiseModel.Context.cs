@@ -26,5 +26,6 @@ namespace pantry_app.Models
         }
     
         public virtual DbSet<PantryWiseUser> PantryWiseUsers { get; set; }
+        public virtual DbSet<Security> Securities { get; set; }
     }
 }

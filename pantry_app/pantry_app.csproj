@@ -383,6 +383,9 @@
     <Compile Include="Models\PantryWiseUser.cs">
       <DependentUpon>PantryWiseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Security.cs">
+      <DependentUpon>PantryWiseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Ingredients.aspx.cs">
       <DependentUpon>Ingredients.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
