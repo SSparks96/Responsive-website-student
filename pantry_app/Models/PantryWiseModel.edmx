@@ -16,6 +16,7 @@
           <EntitySet Name="Securities" EntityType="PantryWiseModel.Security" />
           <EntitySet Name="Inventories" EntityType="PantryWiseModel.Inventory" />
           <EntitySet Name="Ingredients" EntityType="PantryWiseModel.Ingredients" />
+          <EntitySet Name="Measurements" EntityType="PantryWiseModel.Measurements" />
         </EntityContainer>
         <EntityType Name="PantryWiseUser">
           <Key>
@@ -58,6 +59,18 @@
           <Property Name="Quanity" Type="String" Nullable="false" />
           <Property Name="MeasurementID" Type="String" Nullable="false" />
           <Property Name="UserID" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Measurements">
+          <Key>
+            <PropertyRef Name="MeasurementID" />
+          </Key>
+          <Property Name="MeasurementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cup" Type="String" Nullable="false" />
+          <Property Name="Ounce" Type="String" Nullable="false" />
+          <Property Name="Pound" Type="String" Nullable="false" />
+          <Property Name="TableSpoon" Type="String" Nullable="false" />
+          <Property Name="IngredientsID" Type="String" Nullable="false" />
+          <Property Name="RecipesID" Type="String" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

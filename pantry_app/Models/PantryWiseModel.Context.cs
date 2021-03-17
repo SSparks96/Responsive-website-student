@@ -29,5 +29,6 @@ namespace pantry_app.Models
         public virtual DbSet<Security> Securities { get; set; }
         public virtual DbSet<Inventory> Inventories { get; set; }
         public virtual DbSet<Ingredients> Ingredients { get; set; }
+        public virtual DbSet<Measurements> Measurements { get; set; }
     }
 }

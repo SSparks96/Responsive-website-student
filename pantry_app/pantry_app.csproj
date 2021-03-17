@@ -371,6 +371,9 @@
     <Compile Include="Models\Inventory.cs">
       <DependentUpon>PantryWiseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Measurements.cs">
+      <DependentUpon>PantryWiseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PantryWiseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
