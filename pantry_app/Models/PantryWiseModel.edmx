@@ -18,6 +18,39 @@
           <EntitySet Name="Ingredients" EntityType="PantryWiseModel.Ingredients" />
           <EntitySet Name="Measurements" EntityType="PantryWiseModel.Measurements" />
           <EntitySet Name="Recipes" EntityType="PantryWiseModel.Recipes" />
+          <EntitySet Name="PantryWiseUser_has_Inventory" EntityType="PantryWiseModel.PantryWiseUser_has_Inventory" />
+          <AssociationSet Name="SecurityPantryWiseUser" Association="PantryWiseModel.SecurityPantryWiseUser">
+            <End Role="Security" EntitySet="Securities" />
+            <End Role="PantryWiseUser" EntitySet="PantryWiseUsers" />
+          </AssociationSet>
+          <AssociationSet Name="IngredientsPantryWiseUser" Association="PantryWiseModel.IngredientsPantryWiseUser">
+            <End Role="Ingredients" EntitySet="Ingredients" />
+            <End Role="PantryWiseUser" EntitySet="PantryWiseUsers" />
+          </AssociationSet>
+          <AssociationSet Name="IngredientsMeasurements" Association="PantryWiseModel.IngredientsMeasurements">
+            <End Role="Ingredients" EntitySet="Ingredients" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="RecipesMeasurements" Association="PantryWiseModel.RecipesMeasurements">
+            <End Role="Recipes" EntitySet="Recipes" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="RecipesPantryWiseUser" Association="PantryWiseModel.RecipesPantryWiseUser">
+            <End Role="Recipes" EntitySet="Recipes" />
+            <End Role="PantryWiseUser" EntitySet="PantryWiseUsers" />
+          </AssociationSet>
+          <AssociationSet Name="InventoryPantryWiseUser_has_Inventory" Association="PantryWiseModel.InventoryPantryWiseUser_has_Inventory">
+            <End Role="Inventory" EntitySet="Inventories" />
+            <End Role="PantryWiseUser_has_Inventory" EntitySet="PantryWiseUser_has_Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="PantryWiseUserPantryWiseUser_has_Inventory" Association="PantryWiseModel.PantryWiseUserPantryWiseUser_has_Inventory">
+            <End Role="PantryWiseUser" EntitySet="PantryWiseUsers" />
+            <End Role="PantryWiseUser_has_Inventory" EntitySet="PantryWiseUser_has_Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="InventoryRecipes" Association="PantryWiseModel.InventoryRecipes">
+            <End Role="Inventory" EntitySet="Inventories" />
+            <End Role="Recipes" EntitySet="Recipes" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="PantryWiseUser">
           <Key>
@@ -31,6 +64,10 @@
           <Property Name="ZipCode" Type="String" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" Nullable="false" />
           <Property Name="Email" Type="String" Nullable="false" />
+          <NavigationProperty Name="Security" Relationship="PantryWiseModel.SecurityPantryWiseUser" FromRole="PantryWiseUser" ToRole="Security" />
+          <NavigationProperty Name="Ingredient" Relationship="PantryWiseModel.IngredientsPantryWiseUser" FromRole="PantryWiseUser" ToRole="Ingredients" />
+          <NavigationProperty Name="Recipe" Relationship="PantryWiseModel.RecipesPantryWiseUser" FromRole="PantryWiseUser" ToRole="Recipes" />
+          <NavigationProperty Name="PantryWiseUser_has_Inventory" Relationship="PantryWiseModel.PantryWiseUserPantryWiseUser_has_Inventory" FromRole="PantryWiseUser" ToRole="PantryWiseUser_has_Inventory" />
         </EntityType>
         <EntityType Name="Security">
           <Key>
@@ -39,6 +76,7 @@
           <Property Name="SecurityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" Nullable="false" />
           <Property Name="PassWord" Type="String" Nullable="false" />
+          <NavigationProperty Name="PantryWiseUsers" Relationship="PantryWiseModel.SecurityPantryWiseUser" FromRole="Security" ToRole="PantryWiseUser" />
         </EntityType>
         <EntityType Name="Inventory">
           <Key>
@@ -48,7 +86,9 @@
           <Property Name="ItemName" Type="String" Nullable="false" />
           <Property Name="Desription" Type="String" Nullable="false" />
           <Property Name="Quanity" Type="String" Nullable="false" />
-          <Property Name="UseriD" Type="String" Nullable="false" />
+          <Property Name="UserID" Type="String" Nullable="false" />
+          <NavigationProperty Name="PantryWiseUser_has_Inventory" Relationship="PantryWiseModel.InventoryPantryWiseUser_has_Inventory" FromRole="Inventory" ToRole="PantryWiseUser_has_Inventory" />
+          <NavigationProperty Name="Recipes" Relationship="PantryWiseModel.InventoryRecipes" FromRole="Inventory" ToRole="Recipes" />
         </EntityType>
         <EntityType Name="Ingredients">
           <Key>
@@ -60,6 +100,8 @@
           <Property Name="Quanity" Type="String" Nullable="false" />
           <Property Name="MeasurementID" Type="String" Nullable="false" />
           <Property Name="UserID" Type="String" Nullable="false" />
+          <NavigationProperty Name="PantryWiseUsers" Relationship="PantryWiseModel.IngredientsPantryWiseUser" FromRole="Ingredients" ToRole="PantryWiseUser" />
+          <NavigationProperty Name="Measurements" Relationship="PantryWiseModel.IngredientsMeasurements" FromRole="Ingredients" ToRole="Measurements" />
         </EntityType>
         <EntityType Name="Measurements">
           <Key>
@@ -72,6 +114,8 @@
           <Property Name="TableSpoon" Type="String" Nullable="false" />
           <Property Name="IngredientsID" Type="String" Nullable="false" />
           <Property Name="RecipesID" Type="String" Nullable="false" />
+          <NavigationProperty Name="Ingredient" Relationship="PantryWiseModel.IngredientsMeasurements" FromRole="Measurements" ToRole="Ingredients" />
+          <NavigationProperty Name="Recipe" Relationship="PantryWiseModel.RecipesMeasurements" FromRole="Measurements" ToRole="Recipes" />
         </EntityType>
         <EntityType Name="Recipes">
           <Key>
@@ -83,7 +127,51 @@
           <Property Name="InventoryID" Type="String" Nullable="false" />
           <Property Name="UserID" Type="String" Nullable="false" />
           <Property Name="MeasurementID" Type="String" Nullable="false" />
+          <NavigationProperty Name="Measurements" Relationship="PantryWiseModel.RecipesMeasurements" FromRole="Recipes" ToRole="Measurements" />
+          <NavigationProperty Name="PantryWiseUsers" Relationship="PantryWiseModel.RecipesPantryWiseUser" FromRole="Recipes" ToRole="PantryWiseUser" />
+          <NavigationProperty Name="Inventory" Relationship="PantryWiseModel.InventoryRecipes" FromRole="Recipes" ToRole="Inventory" />
         </EntityType>
+        <EntityType Name="PantryWiseUser_has_Inventory">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InventoryID" Type="String" Nullable="false" />
+          <NavigationProperty Name="Inventory" Relationship="PantryWiseModel.InventoryPantryWiseUser_has_Inventory" FromRole="PantryWiseUser_has_Inventory" ToRole="Inventory" />
+          <NavigationProperty Name="PantryWiseUser" Relationship="PantryWiseModel.PantryWiseUserPantryWiseUser_has_Inventory" FromRole="PantryWiseUser_has_Inventory" ToRole="PantryWiseUser" />
+        </EntityType>
+        <Association Name="SecurityPantryWiseUser">
+          <End Type="PantryWiseModel.Security" Role="Security" Multiplicity="1" />
+          <End Type="PantryWiseModel.PantryWiseUser" Role="PantryWiseUser" Multiplicity="*" />
+        </Association>
+        <Association Name="IngredientsPantryWiseUser">
+          <End Type="PantryWiseModel.Ingredients" Role="Ingredients" Multiplicity="1" />
+          <End Type="PantryWiseModel.PantryWiseUser" Role="PantryWiseUser" Multiplicity="*" />
+        </Association>
+        <Association Name="IngredientsMeasurements">
+          <End Type="PantryWiseModel.Ingredients" Role="Ingredients" Multiplicity="1" />
+          <End Type="PantryWiseModel.Measurements" Role="Measurements" Multiplicity="*" />
+        </Association>
+        <Association Name="RecipesMeasurements">
+          <End Type="PantryWiseModel.Recipes" Role="Recipes" Multiplicity="1" />
+          <End Type="PantryWiseModel.Measurements" Role="Measurements" Multiplicity="*" />
+        </Association>
+        <Association Name="RecipesPantryWiseUser">
+          <End Type="PantryWiseModel.Recipes" Role="Recipes" Multiplicity="1" />
+          <End Type="PantryWiseModel.PantryWiseUser" Role="PantryWiseUser" Multiplicity="*" />
+        </Association>
+        <Association Name="InventoryPantryWiseUser_has_Inventory">
+          <End Type="PantryWiseModel.Inventory" Role="Inventory" Multiplicity="1" />
+          <End Type="PantryWiseModel.PantryWiseUser_has_Inventory" Role="PantryWiseUser_has_Inventory" Multiplicity="*" />
+        </Association>
+        <Association Name="PantryWiseUserPantryWiseUser_has_Inventory">
+          <End Type="PantryWiseModel.PantryWiseUser" Role="PantryWiseUser" Multiplicity="1" />
+          <End Type="PantryWiseModel.PantryWiseUser_has_Inventory" Role="PantryWiseUser_has_Inventory" Multiplicity="*" />
+        </Association>
+        <Association Name="InventoryRecipes">
+          <End Type="PantryWiseModel.Inventory" Role="Inventory" Multiplicity="1" />
+          <End Type="PantryWiseModel.Recipes" Role="Recipes" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

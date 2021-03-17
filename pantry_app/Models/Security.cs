@@ -14,8 +14,17 @@ namespace pantry_app.Models
     
     public partial class Security
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Security()
+        {
+            this.PantryWiseUsers = new HashSet<PantryWiseUser>();
+        }
+    
         public int SecurityID { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PantryWiseUser> PantryWiseUsers { get; set; }
     }
 }

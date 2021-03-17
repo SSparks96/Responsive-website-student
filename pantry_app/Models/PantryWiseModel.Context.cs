@@ -31,5 +31,6 @@ namespace pantry_app.Models
         public virtual DbSet<Ingredients> Ingredients { get; set; }
         public virtual DbSet<Measurements> Measurements { get; set; }
         public virtual DbSet<Recipes> Recipes { get; set; }
+        public virtual DbSet<PantryWiseUser_has_Inventory> PantryWiseUser_has_Inventory { get; set; }
     }
 }

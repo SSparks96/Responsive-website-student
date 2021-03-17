@@ -392,6 +392,9 @@
     <Compile Include="Models\PantryWiseUser.cs">
       <DependentUpon>PantryWiseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PantryWiseUser_has_Inventory.cs">
+      <DependentUpon>PantryWiseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Recipes.cs">
       <DependentUpon>PantryWiseModel.tt</DependentUpon>
     </Compile>

@@ -14,11 +14,23 @@ namespace pantry_app.Models
     
     public partial class Ingredients
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Ingredients()
+        {
+            this.PantryWiseUsers = new HashSet<PantryWiseUser>();
+            this.Measurements = new HashSet<Measurements>();
+        }
+    
         public int IngredientsID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Quanity { get; set; }
         public string MeasurementID { get; set; }
         public string UserID { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PantryWiseUser> PantryWiseUsers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Measurements> Measurements { get; set; }
     }
 }

@@ -14,6 +14,12 @@ namespace pantry_app.Models
     
     public partial class PantryWiseUser
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PantryWiseUser()
+        {
+            this.PantryWiseUser_has_Inventory = new HashSet<PantryWiseUser_has_Inventory>();
+        }
+    
         public int UserID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -22,5 +28,11 @@ namespace pantry_app.Models
         public string ZipCode { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+    
+        public virtual Security Security { get; set; }
+        public virtual Ingredients Ingredient { get; set; }
+        public virtual Recipes Recipe { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PantryWiseUser_has_Inventory> PantryWiseUser_has_Inventory { get; set; }
     }
 }

@@ -12,17 +12,12 @@ namespace pantry_app.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Measurements
+    public partial class PantryWiseUser_has_Inventory
     {
-        public int MeasurementID { get; set; }
-        public string Cup { get; set; }
-        public string Ounce { get; set; }
-        public string Pound { get; set; }
-        public string TableSpoon { get; set; }
-        public string IngredientsID { get; set; }
-        public string RecipesID { get; set; }
+        public int UserID { get; set; }
+        public string InventoryID { get; set; }
     
-        public virtual Ingredients Ingredient { get; set; }
-        public virtual Recipes Recipe { get; set; }
+        public virtual Inventory Inventory { get; set; }
+        public virtual PantryWiseUser PantryWiseUser { get; set; }
     }
 }
