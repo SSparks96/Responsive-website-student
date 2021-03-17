@@ -14,6 +14,7 @@
         <EntityContainer Name="PantryWise1Entities" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="PantryWiseUsers" EntityType="PantryWiseModel.PantryWiseUser" />
           <EntitySet Name="Securities" EntityType="PantryWiseModel.Security" />
+          <EntitySet Name="Inventories" EntityType="PantryWiseModel.Inventory" />
         </EntityContainer>
         <EntityType Name="PantryWiseUser">
           <Key>
@@ -35,6 +36,16 @@
           <Property Name="SecurityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" Nullable="false" />
           <Property Name="PassWord" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+          </Key>
+          <Property Name="InventoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="String" Nullable="false" />
+          <Property Name="Desription" Type="String" Nullable="false" />
+          <Property Name="Quanity" Type="String" Nullable="false" />
+          <Property Name="UseriD" Type="String" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

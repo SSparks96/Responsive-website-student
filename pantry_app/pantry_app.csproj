@@ -365,6 +365,9 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Models\Inventory.cs">
+      <DependentUpon>PantryWiseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PantryWiseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
