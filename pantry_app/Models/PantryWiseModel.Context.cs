@@ -25,5 +25,6 @@ namespace pantry_app.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<PantryWiseUser> PantryWiseUsers { get; set; }
     }
 }

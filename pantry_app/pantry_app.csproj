@@ -380,6 +380,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PantryWiseModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\PantryWiseUser.cs">
+      <DependentUpon>PantryWiseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Ingredients.aspx.cs">
       <DependentUpon>Ingredients.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -11,7 +11,22 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PantryWiseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="PantryWise1Entities" annotation:LazyLoadingEnabled="true" />
+        <EntityContainer Name="PantryWise1Entities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="PantryWiseUsers" EntityType="PantryWiseModel.PantryWiseUser" />
+        </EntityContainer>
+        <EntityType Name="PantryWiseUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" />
+          <Property Name="State" Type="String" Nullable="false" />
+          <Property Name="ZipCode" Type="String" Nullable="false" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
