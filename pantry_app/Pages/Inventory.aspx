@@ -35,7 +35,7 @@
     </p>
     <p>
         
-         <asp:Button ID="btnIngredients" runat="server" Text="Add New Item" 
+         <asp:Button ID="btnNewItem" runat="server" Text="Add New Item" 
                         PostBackUrl="~/Ingredients.aspx" CausesValidation="False" CssClass="btn" />
 
     </p>
