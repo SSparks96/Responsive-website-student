@@ -171,16 +171,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\PantryWiseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PantryWiseModel.edmx</DependentUpon>
-      <LastGenOutput>PantryWiseModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\PantryWiseModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PantryWiseModel.edmx</DependentUpon>
-      <LastGenOutput>PantryWiseModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Pages\Ingredients.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -219,13 +209,6 @@
     <Content Include="Account\Web.config" />
     <Content Include="Pages\SuggestedRecipes.aspx" />
     <Content Include="Pages\GroceryList.aspx" />
-    <EntityDeploy Include="Models\PantryWiseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PantryWiseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\PantryWiseModel.edmx.diagram">
-      <DependentUpon>PantryWiseModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -368,42 +351,6 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Models\Ingredients.cs">
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Inventory.cs">
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Measurements.cs">
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PantryWiseModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PantryWiseModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PantryWiseModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PantryWiseModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PantryWiseModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PantryWiseUser.cs">
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PantryWiseUser_has_Inventory.cs">
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Recipes.cs">
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Security.cs">
-      <DependentUpon>PantryWiseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Ingredients.aspx.cs">
       <DependentUpon>Ingredients.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
