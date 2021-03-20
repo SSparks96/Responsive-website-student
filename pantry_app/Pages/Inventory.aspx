@@ -16,14 +16,17 @@
     </p>
     <p>
         
-        <asp:GridView ID="GridView1" runat="server">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="InventoryID" DataSourceID="SqlDataSource3">
             <Columns>
-                <asp:BoundField HeaderText="Inventory ID" />
-                <asp:BoundField HeaderText="Item Name" />
-                <asp:BoundField HeaderText="Category" />
-                <asp:BoundField HeaderText="Units of Measurement" />
+                <asp:BoundField HeaderText="InventoryID" DataField="InventoryID" ReadOnly="True" SortExpression="InventoryID" />
+                <asp:BoundField HeaderText="ItemName" DataField="ItemName" SortExpression="ItemName" />
+                <asp:BoundField HeaderText="Description" DataField="Description" SortExpression="Description" />
+                <asp:BoundField HeaderText="Quanity" DataField="Quanity" SortExpression="Quanity" />
             </Columns>
         </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" SelectCommand="SELECT [InventoryID], [ItemName], [Description], [Quanity] FROM [Inventory]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
     </p>
     <p>
         
@@ -49,21 +52,21 @@
     </p>
     <p>
         
-        Category</p>
+        Description</p>
     <p>
         
         <asp:TextBox ID="TextBox3" runat="server" Width="187px"></asp:TextBox>
     </p>
     <p>
         
-        Units of Measurment</p>
+        Quantity</p>
     <p>
         
         <asp:TextBox ID="TextBox4" runat="server" Width="185px"></asp:TextBox>
     </p>
     <p>
         
-        Quantity</p>
+        Category</p>
     <p>
         
         <asp:TextBox ID="TextBox5" runat="server" Width="184px"></asp:TextBox>

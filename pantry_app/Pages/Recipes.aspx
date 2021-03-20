@@ -5,12 +5,7 @@
     <div>
         <div class="row">
             <div class="col-xs-6">
-                <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-responsive" >
-                    <Columns>
-                        <asp:CommandField ShowEditButton="True" />
-                        <asp:CommandField ShowSelectButton="True" />
-                        <asp:CommandField ShowDeleteButton="True" />
-                    </Columns>
+                <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-responsive" DataSourceID="SqlDataSource2" >
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
             </div>
