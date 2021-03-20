@@ -9,11 +9,15 @@ namespace pantry_app.Pages
 {
     public partial class InventoryList : System.Web.UI.Page
     {
+        private object lblError;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        
+
+
+
     }
 }
 

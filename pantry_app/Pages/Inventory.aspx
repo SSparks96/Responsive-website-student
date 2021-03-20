@@ -37,12 +37,15 @@
         Click Add New Item to Create New Inventory!</p>
     <p>
         
+        <asp:Label ID="lblError" runat="server" EnableViewState="false" 
+                        CssClass="text-danger"></asp:Label></p>
+            
         <asp:Label ID="InventoryID" runat="server" Text="Inventory ID"></asp:Label>
     </p>
     <p>
-        
         <asp:TextBox ID="TextBox1" runat="server" Width="192px"></asp:TextBox>
     </p>
+        
     <p>
         
         Item Name</p>
