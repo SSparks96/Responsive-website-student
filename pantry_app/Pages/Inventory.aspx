@@ -12,9 +12,9 @@
     <p>
         
         <asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="True"
-                            CssClass="form-control" DataSourceID="SqlDataSource3" 
-                            DataTextField="ItemName" DataValueField="Category" 
-                            OnSelectedIndexChanged="Reset">
+                    AutoGenerateColumns="False" DataKeyNames="InventoryID"
+                    DataSourceID="SqlDataSource3"
+                    CssClass="table table-bordered table-condensed table-hover">
         </asp:DropDownList>
     </p>
     <p>
