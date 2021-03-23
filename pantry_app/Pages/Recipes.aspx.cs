@@ -11,11 +11,12 @@ namespace pantry_app
     {
         protected void gvRecipes_PreRender(object sender, EventArgs e)
         {
-            
+            gvRecipes.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
-    
-      
-    
-    
+
+        protected void gvRecipes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
