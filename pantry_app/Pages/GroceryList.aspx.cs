@@ -15,10 +15,7 @@ namespace pantry_app
         string cs = ConfigurationManager.ConnectionStrings["PantryWiseDBConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                autoUpdateGroceryListTable();
-            }
+           
 
         }
         void clear()
