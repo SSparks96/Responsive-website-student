@@ -103,6 +103,13 @@
             </asp:SqlDataSource>
         </div>
         <div class="row">
+            <div class="col-xs-3">
+                <asp:Button ID="btAddRecipes" runat="server" Text="Add Recipes" />
+            </div>
+        </div>
+        
+        
+        <div class="row">
             <div class="col-xs-6">
                 <asp:Label ID="lblError" runat="server" CssClass="text-danger" EnableViewState="False"></asp:Label>
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Please fix these issues:" class="text-danger"/>
