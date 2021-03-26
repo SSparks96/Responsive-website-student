@@ -72,8 +72,32 @@ namespace pantry_app
             
             protected void btAddRecipes_Click(object sender, EventArgs e)
             {
+            
                 
+                if (IsValid)
+                 {
+                    
+                    var parameters = SqlDataSource1.InsertParameters;
+                    parameters["RecipesID"].DefaultValue = txtID.Text;
+                    parameters["RecipesName"].DefaultValue = txtName.Text;
+                    parameters["Description"].DefaultValue = txtDecription2.Text;
+
+                try
+                {
+                    SqlDataSource1.Insert();
+                    txtID.Text = "";
+                    txtName.Text = "";
+                    txtDecription2.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    lblError.Text = DatabaseErrorMessage(ex.Message);
+                   
+                }
+                    
             }
+            
+        }
 
         
     }
