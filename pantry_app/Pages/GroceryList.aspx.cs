@@ -15,7 +15,7 @@ namespace pantry_app
         string cs = ConfigurationManager.ConnectionStrings["PantryWiseDBConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            
 
         }
         void clear()
@@ -41,8 +41,9 @@ namespace pantry_app
 
             }
 
-            clear();
+            
             autoUpdateGroceryListTable();
+            clear();
 
         }
         protected void autoUpdateGroceryListTable()
@@ -57,10 +58,11 @@ namespace pantry_app
                 {
                     GroceryListTable.DataSource = dr;
                     GroceryListTable.DataBind();
-
-
+                    
                 }
+              
             }
         }
+        
     }
 }
