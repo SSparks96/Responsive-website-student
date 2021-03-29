@@ -351,6 +351,7 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Pages\grdCategories.cs" />
     <Compile Include="Pages\Ingredients.aspx.cs">
       <DependentUpon>Ingredients.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

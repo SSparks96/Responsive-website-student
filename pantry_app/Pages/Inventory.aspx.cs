@@ -7,13 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace pantry_app.Pages
 {
-    public partial class InventoryList : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
+        public object SqlDataSource2 { get; private set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        
-    }
-}
 
+      }
+
+}
