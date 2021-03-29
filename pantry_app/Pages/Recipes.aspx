@@ -3,20 +3,14 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Recipes</h1>
     <div>
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-6 table-responsive">
-                <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-condensed" AllowPaging="True" AllowSorting="True" 
-                    AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="RecipesID"  OnPreRender="gvRecipes_PreRender" OnSelectedIndexChanged="gvRecipes_SelectedIndexChanged" >
-                    <AlternatingRowStyle BackColor="#3399FF" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" />
+        <div class="row">
+            <div class="col-xs-6">
+                <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-responsive" >
                     <Columns>
-                        <asp:BoundField DataField="RecipesID" HeaderText="RecipesID" SortExpression="RecipesID" ReadOnly="True" />
-                        <asp:BoundField DataField="RecipesName" HeaderText="RecipesName" SortExpression="RecipesName" />
-                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                        <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                        <asp:CommandField ShowEditButton="True" />
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowDeleteButton="True" />
                     </Columns>
-                    <HeaderStyle BackColor="Black" ForeColor="White" />
-                    <PagerStyle CssClass="pagerStyle" HorizontalAlign="Center" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" SelectCommand="SELECT [RecipesID], [RecipesName], [Description] FROM [Recipes]">
                 </asp:SqlDataSource>
