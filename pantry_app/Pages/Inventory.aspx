@@ -5,7 +5,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Inventory </h1>
 
-    <h5>Inventory</h5>
+    <h5>Inventory conflict fix</h5>
     <p>
         <asp:FormView ID="FormView1" runat="server" AllowPaging="True" CellPadding="4" DataKeyNames="InventoryID" DataSourceID="SqlDataSource2" ForeColor="#333333" Width="266px">
             <EditItemTemplate>
