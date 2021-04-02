@@ -7,27 +7,27 @@
 
     <h5>Inventory</h5>
     <p>
-        <asp:FormView ID="FormView1" runat="server" AllowPaging="True" CellPadding="4" DataKeyNames="InventoryID" DataSourceID="SqlDataSource2" ForeColor="#333333" Width="266px">
+        <asp:FormView ID="FormView1" runat="server" AllowPaging="True" CellPadding="4" DataKeyNames="InventoryID" DataSourceID="SqlDataSource2" ForeColor="#333333" Width="220px" Height="165px">
             <EditItemTemplate>
                 InventoryID:
-                <asp:Label ID="InventoryIDLabel1" runat="server" Text='<%# Eval("InventoryID") %>' />
+                <asp:DynamicControl ID="InventoryIDDynamicControl" runat="server" DataField="InventoryID" Mode="ReadOnly" />
                 <br />
                 ItemName:
-                <asp:TextBox ID="ItemNameTextBox" runat="server" Text='<%# Bind("ItemName") %>' />
+                <asp:DynamicControl ID="ItemNameDynamicControl" runat="server" DataField="ItemName" Mode="Edit" />
                 <br />
                 Description:
-                <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+                <asp:DynamicControl ID="DescriptionDynamicControl" runat="server" DataField="Description" Mode="Edit" />
                 <br />
                 Quanity:
-                <asp:TextBox ID="QuanityTextBox" runat="server" Text='<%# Bind("Quanity") %>' />
+                <asp:DynamicControl ID="QuanityDynamicControl" runat="server" DataField="Quanity" Mode="Edit" />
                 <br />
                 CategoryID:
-                <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                <asp:DynamicControl ID="CategoryIDDynamicControl" runat="server" DataField="CategoryID" Mode="Edit" />
                 <br />
                 CategoryName:
-                <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
+                <asp:DynamicControl ID="CategoryNameDynamicControl" runat="server" DataField="CategoryName" Mode="Edit" />
                 <br />
-                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" ValidationGroup="Insert" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </EditItemTemplate>
             <EditRowStyle BackColor="#999999" />
@@ -35,79 +35,57 @@
             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
             <InsertItemTemplate>
                 InventoryID:
-                <asp:TextBox ID="InventoryIDTextBox" runat="server" Text='<%# Bind("InventoryID") %>' />
+                <asp:DynamicControl ID="InventoryIDDynamicControl" runat="server" DataField="InventoryID" Mode="Insert" ValidationGroup="Insert" />
                 <br />
                 ItemName:
-                <asp:TextBox ID="ItemNameTextBox" runat="server" Text='<%# Bind("ItemName") %>' />
+                <asp:DynamicControl ID="ItemNameDynamicControl" runat="server" DataField="ItemName" Mode="Insert" ValidationGroup="Insert" />
                 <br />
                 Description:
-                <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+                <asp:DynamicControl ID="DescriptionDynamicControl" runat="server" DataField="Description" Mode="Insert" ValidationGroup="Insert" />
                 <br />
                 Quanity:
-                <asp:TextBox ID="QuanityTextBox" runat="server" Text='<%# Bind("Quanity") %>' />
+                <asp:DynamicControl ID="QuanityDynamicControl" runat="server" DataField="Quanity" Mode="Insert" ValidationGroup="Insert" />
                 <br />
                 CategoryID:
-                <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                <asp:DynamicControl ID="CategoryIDDynamicControl" runat="server" DataField="CategoryID" Mode="Insert" ValidationGroup="Insert" />
                 <br />
                 CategoryName:
-                <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
+                <asp:DynamicControl ID="CategoryNameDynamicControl" runat="server" DataField="CategoryName" Mode="Insert" ValidationGroup="Insert" />
                 <br />
-                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" ValidationGroup="Insert" />
                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </InsertItemTemplate>
             <ItemTemplate>
-                <table style="width: 100%">
-                    <tr>
-                        <td style="width: 103px">InventoryID</td>
-                        <td style="width: 30px">:</td>
-                        <td>
-                            <asp:Label ID="InventoryIDLabel" runat="server" Text='<%# Eval("InventoryID") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 103px">ItemName</td>
-                        <td style="width: 30px">: </td>
-                        <td>
-                            <asp:Label ID="ItemNameLabel" runat="server" Text='<%# Bind("ItemName") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 103px">Description</td>
-                        <td style="width: 30px">: </td>
-                        <td>
-                            <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Bind("Description") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 103px">Quanity</td>
-                        <td style="width: 30px">:</td>
-                        <td>
-                            <asp:Label ID="QuanityLabel" runat="server" Text='<%# Bind("Quanity") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 103px">CategoryID</td>
-                        <td style="width: 30px">:</td>
-                        <td>
-                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Bind("CategoryID") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 103px">CategoryName</td>
-                        <td style="width: 30px">: </td>
-                        <td>
-                            <asp:Label ID="CategoryNameLabel" runat="server" Text='<%# Bind("CategoryName") %>' />
-                        </td>
-                    </tr>
-                </table>
+                InventoryID:&nbsp;<asp:DynamicControl ID="InventoryIDDynamicControl" runat="server" DataField="InventoryID" Mode="ReadOnly" />
+                <br />
+                ItemName:
+                <asp:DynamicControl ID="ItemNameDynamicControl" runat="server" DataField="ItemName" Mode="ReadOnly" />
+                <br />
+                Description:
+                <asp:DynamicControl ID="DescriptionDynamicControl" runat="server" DataField="Description" Mode="ReadOnly" />
+                <br />
+                Quanity:
+                <asp:DynamicControl ID="QuanityDynamicControl" runat="server" DataField="Quanity" Mode="ReadOnly" />
+                <br />
+                CategoryID:
+                <asp:DynamicControl ID="CategoryIDDynamicControl" runat="server" DataField="CategoryID" Mode="ReadOnly" />
+                <br />
+                CategoryName:
+                <asp:DynamicControl ID="CategoryNameDynamicControl" runat="server" DataField="CategoryName" Mode="ReadOnly" />
                 <br />
                 <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
                 &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
-                &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Add new Item" />
+                &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
             </ItemTemplate>
             <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
             <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
         </asp:FormView>
+    </p>
+    <p>
+        <asp:FormView ID="FormView2" runat="server" DataSourceID="SqlDataSource4">
+        </asp:FormView>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server"></asp:SqlDataSource>
     </p>
     <p>Choose Category</p>
     <p>
@@ -133,7 +111,6 @@
 
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField HeaderText="InventoryID" DataField="InventoryID" SortExpression="InventoryID" ReadOnly="True" /> 
                 <asp:BoundField HeaderText="ItemName" DataField="ItemName" SortExpression="ItemName" />
                 <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
