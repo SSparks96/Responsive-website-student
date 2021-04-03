@@ -108,7 +108,7 @@
          <div class="form-group">
             <asp:Label ID="lblRecipeName" runat="server" Text="Recipe Name" CssClass="col-xs-2" ></asp:Label>
          <div class="col-xs-3">
-            <asp:TextBox ID="txtName" runat="server" MaxLength="10" CssClass="form-control" ></asp:TextBox>
+            <asp:TextBox ID="txtName" runat="server" MaxLength="50" CssClass="form-control" ></asp:TextBox>
          </div>
             <div class="col-xs-offset-1 col-xs-4">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Recipe name is required:" CssClass="text-danger" ControlToValidate="txtName"></asp:RequiredFieldValidator>
@@ -123,13 +123,13 @@
             <div class="col-xs-offset-1 col-xs-4">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" CssClass="text-danger" ErrorMessage ="A discription is required:" ControlToValidate="txtDecription2"></asp:RequiredFieldValidator>
             </div>
+        </div>
         
-        <div class="row">
-            <div class="col-xs-3">
-                <asp:Button ID="btAddRecipes" runat="server" Text="Add Recipes"  CssClass="btn btn-primary" OnClick="btAddRecipes_Click" />
+            <div class="col-xs-offset-2 col-xs-3">
+                <asp:Button ID="btAddRecipes" runat="server"  Text="Add Recipes"  CssClass="btn btn-primary" OnClick="btAddRecipes_Click" />
             </div>
-        </div>
-        </div>
+        
+        
             
          <p>
             <asp:Label ID="lblError" runat="server" CssClass="text-danger" EnableViewState="False"></asp:Label>
@@ -140,7 +140,7 @@
 
      
     
-
+      
    </div>
 </div>
 </asp:Content>
