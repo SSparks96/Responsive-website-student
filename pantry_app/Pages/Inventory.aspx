@@ -131,9 +131,9 @@
         
         
         <asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="True" 
-                            DataSourceID="SqlDataSource1" DataTextField="CategoryName" DataValueField="CategoryID" CssClass="form-control">
+                            DataSourceID="SqlDataSource5" DataTextField="CategoryName" DataValueField="CategoryID" CssClass="form-control">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" 
+        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" 
                             SelectCommand="SELECT [CategoryID], [CategoryName] FROM [Category] ORDER BY [CategoryName]">
 
         </asp:SqlDataSource>

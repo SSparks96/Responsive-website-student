@@ -27,6 +27,8 @@
                 <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity"></asp:BoundField>
                 <asp:CommandField ShowSelectButton="True"></asp:CommandField>
             </Columns>
+
         </asp:GridView>
+     </div>
         <asp:Button ID="testing" runat="server" Text="testing to see if it fixed the merge issue" />
     </asp:Content>
