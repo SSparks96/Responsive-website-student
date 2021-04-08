@@ -105,22 +105,22 @@ namespace pantry_app
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// Description control.
+        /// Instruction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Description;
+        protected global::System.Web.UI.WebControls.Label Instruction;
 
         /// <summary>
-        /// txtDecription2 control.
+        /// txtInstruction2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDecription2;
+        protected global::System.Web.UI.WebControls.TextBox txtInstruction2;
 
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -141,6 +141,15 @@ namespace pantry_app
         protected global::System.Web.UI.WebControls.Button btAddRecipes;
 
         /// <summary>
+        /// btClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btClear;
+
+        /// <summary>
         /// lblError control.
         /// </summary>
         /// <remarks>
@@ -148,6 +157,15 @@ namespace pantry_app
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// ValidationSummary1 control.
