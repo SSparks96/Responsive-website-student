@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/StyleSheet1.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.4.1.intellisense.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <title><%: Page.Title %> - Welcome to our Pantry Application</title>
@@ -18,8 +19,48 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <style type="text/css">
+        .style1
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 48pt;
+            font-weight: bold;
+            font-style: italic;
+            color: lightblue;
+        }
+        h1 {
+            color: lightblue;
+            }
+        h2 {
+            background-color:lightblue;
+            padding:10;
+        }
+      .body-headline{
+		padding: 10px;
+		background-color:#000;
+		color: black;
+		font-size:2em;
+	}
+     Nav {
+		color: lightblue;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 2.2em;
+	}    
+     h1{
+		background-color:lightblue;
+		color:white;
+	}
+   .body-headline{
+       background-color:lightblue;
+
+   }
+      
+    </style>
+
 </head>
-<body>
+ <div style="background-image: url('/Images/dark pantry-01-walk-in-pantry.jpg')" >
+     <body>
     <form runat="server" class="form-horizontal">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -81,11 +122,14 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+        
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - The Best SE_II Class</p>
             </footer>
         </div>
     </form>
 </body>
+
+
+         </div>
 </html>

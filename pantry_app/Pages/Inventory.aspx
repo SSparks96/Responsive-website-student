@@ -3,7 +3,8 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>Inventory </h1>
+
+    <span class="style1">Inventory</span><br />
 
     <h5>Inventory</h5>
     <p>

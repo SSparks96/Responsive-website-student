@@ -171,6 +171,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Images\dark pantry-01-walk-in-pantry.jpg" />
+    <Content Include="Images\pantry-01-walk-in-pantry.jpg" />
     <Content Include="Pages\Ingredients.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
