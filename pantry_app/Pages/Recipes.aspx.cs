@@ -72,39 +72,57 @@ namespace pantry_app
 
         protected void btAddRecipes_Click(object sender, EventArgs e)
         {
-            string sqlStmt;
-            string conString;
-            SqlConnection cn = null;
-            try
+            //string sqlStmt;
+            //string conString;
+           // SqlConnection cn = null;
+           // try
+           // {
+
+               // sqlStmt = "insert into Recipes (RecipesNum,RecipesName,Instructions) Values (@RecipeNum,@RecipesNames,@Instructions)  ";
+               // conString = "PantryWiseDBConnectionString";
+               // cn = new SqlConnection(conString);
+              //  SqlCommand cmd = new SqlCommand(sqlStmt, cn);
+              //  cmd.Parameters.Add(new SqlParameter("@RecipeNum", SqlDbType.NVarChar, 50));
+              //  cmd.Parameters.Add(new SqlParameter("@RecipesName", SqlDbType.NVarChar, 50));
+              //  cmd.Parameters.Add(new SqlParameter("@Instructions", SqlDbType.NVarChar, 1000));
+
+              //  cmd.Parameters["@RecipeNum"].Value = txtNum.Text;
+              //  cmd.Parameters["@RecipesName"].Value = txtName.Text;
+              //  cmd.Parameters["@Instructions"].Value = txtInstruction2.Text;
+
+             //   cn.Open();
+             //   cmd.ExecuteNonQuery();
+             //   Label1.Text = "Recipe added succesfully!";
+
+          //  }
+          //  catch (Exception ex)
+           // {
+            //    lblError.Text = DatabaseErrorMessage(ex.Message);
+
+         //   }
+          //  finally
+          //  {
+               // cn.Close();
+            //  }
+            if (IsValid)
             {
-
-                sqlStmt = "insert into Recipes (RecipesID,RecipesName,Instructions) Values (@Recipenum,@RecipesNames,@Instructions)  ";
-                conString = "PantryWiseDBConnectionString";
-                cn = new SqlConnection(conString);
-                SqlCommand cmd = new SqlCommand(sqlStmt, cn);
-                cmd.Parameters.Add(new SqlParameter("@RecipeNum", SqlDbType.NVarChar, 50));
-                cmd.Parameters.Add(new SqlParameter("@RecipesName", SqlDbType.NVarChar, 50));
-                cmd.Parameters.Add(new SqlParameter("@Instructions", SqlDbType.NVarChar, 1000));
-
-                cmd.Parameters["@RecipeNum"].Value = txtNum.Text;
-                cmd.Parameters["@RecipesName"].Value = txtName.Text;
-                cmd.Parameters["@Instructions"].Value = txtInstruction2.Text;
-
-                cn.Open();
-                cmd.ExecuteNonQuery();
-                Label1.Text = "Recipe added succesfully!";
-
-            }
-            catch (Exception ex)
-            {
-                lblError.Text = DatabaseErrorMessage(ex.Message);
-
-            }
-            finally
-            {
-                cn.Close();
-            }
-
+                var parameters = SqlDataSource1.InsertParameters;
+                parameters["RecipeNum"].DefaultValue = txtNum.Text;
+                parameters["RecipesName"].DefaultValue = txtName.Text;
+                parameters["Instructions"].DefaultValue = txtInstruction2.Text;
+                try
+                {
+                    SqlDataSource1.Insert();
+                    txtNum.Text = "";
+                    txtName.Text = "";
+                    txtInstruction2.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    lblError.Text = "A database error has occurred. " + "Message: " + ex.Message;
+                    
+                }
+            }       
         }
 
         protected void btClear_Click(object sender, EventArgs e)
