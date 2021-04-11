@@ -10,32 +10,29 @@
                     AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="RecipesID"  OnPreRender="gvRecipes_PreRender" OnSelectedIndexChanged="gvRecipes_SelectedIndexChanged" >
                     <AlternatingRowStyle BackColor="#3399FF" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" />
                     <Columns>
-                        <asp:TemplateField HeaderText="Recipe ID" SortExpression="RecipesID">
+                        <asp:TemplateField HeaderText="RecipeNum" SortExpression="RecipeNum">
                             <EditItemTemplate>
-                                <asp:Label ID="txtID" runat="server" Text='<%# Eval("RecipesID") %>'></asp:Label>
+                                <asp:TextBox ID="txtRecipeNum" runat="server" Text='<%# Bind("RecipeNum") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lblID" runat="server" Text='<%# Bind("RecipesID") %>'></asp:Label>
+                                <asp:Label ID="lblRecipeNum" runat="server" Text='<%# Bind("RecipeNum") %>'></asp:Label>
                             </ItemTemplate>
-                            <HeaderStyle CssClass="text-center" />
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Recipe Name" SortExpression="RecipesName">
+                        <asp:TemplateField HeaderText="RecipeName" SortExpression="RecipesName">
                             <EditItemTemplate>
-                                <asp:TextBox ID="RecipesName" runat="server" Text='<%# Bind("RecipesName") %>'></asp:TextBox>
+                                <asp:TextBox ID="txtRecipeName" runat="server" Text='<%# Bind("RecipesName") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lblRecipesName" runat="server" Text='<%# Bind("RecipesName") %>'></asp:Label>
+                                <asp:Label ID="lblRecipeName" runat="server" Text='<%# Bind("RecipesName") %>'></asp:Label>
                             </ItemTemplate>
-                            <HeaderStyle CssClass="text-center" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Instructions" SortExpression="Instructions">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txtInstructions2" runat="server" Text='<%# Bind("Instructions") %>'></asp:TextBox>
+                                <asp:TextBox ID="txtInstruction" runat="server" Text='<%# Bind("Instructions") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lblInstructions2" runat="server" Text='<%# Bind("Instructions") %>'></asp:Label>
+                                <asp:Label ID="lblInstruction" runat="server" Text='<%# Bind("Instructions") %>'></asp:Label>
                             </ItemTemplate>
-                            <HeaderStyle CssClass="text-center" />
                         </asp:TemplateField>
                         <asp:CommandField ShowSelectButton="True" />
                     </Columns>
@@ -43,7 +40,7 @@
                     <PagerStyle CssClass="pagerStyle" HorizontalAlign="Center"  />
                     <PagerSettings Mode="NumericFirstLast"/>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" SelectCommand="SELECT [RecipesID], [RecipesName], [Instructions] FROM [Recipes]">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" SelectCommand="SELECT [RecipesID], [RecipeNum], [RecipesName], [Instructions] FROM [Recipes]">
                 </asp:SqlDataSource>
              </div>
 
@@ -52,21 +49,23 @@
                  CssClass="table table-condensed table-bordered table-striped" OnItemDeleted="DetailsView1_ItemDeleted" OnItemUpdated="DetailsView1_ItemUpdated" OnItemInserted="DetailsView1_ItemInserted" AlternatingRowStyle-BackColor="Black" BorderStyle="Solid" BorderWidth="2px">
                 <AlternatingRowStyle BackColor="Silver" BorderColor="Black" BorderStyle="Inset" ForeColor="#0066FF"></AlternatingRowStyle>
                 <Fields>
-                    <asp:BoundField DataField="RecipesID" HeaderText="RecipesID" ReadOnly="True" SortExpression="RecipesID" />
+                    <asp:BoundField DataField="RecipeNum" HeaderText="RecipeNum" SortExpression="RecipeNum" />
                     <asp:BoundField DataField="RecipesName" HeaderText="RecipesName" SortExpression="RecipesName" />
                     <asp:BoundField DataField="Instructions" HeaderText="Instructions" SortExpression="Instructions" />
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 </Fields>
                 <HeaderStyle BackColor="Black" ForeColor="White" />
             </asp:DetailsView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" DeleteCommand="DELETE FROM [Recipes] WHERE [RecipesID] = @original_RecipesID AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))" InsertCommand="INSERT INTO [Recipes] ([RecipesID], [RecipesName], [Instructions]) VALUES (@RecipesID, @RecipesName, @Instructions)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [RecipesID], [RecipesName], [Instructions] FROM [Recipes] WHERE ([RecipesID] = @RecipesID)" UpdateCommand="UPDATE [Recipes] SET [RecipesName] = @RecipesName, [Instructions] = @Instructions WHERE [RecipesID] = @original_RecipesID AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" DeleteCommand="DELETE FROM [Recipes] WHERE [RecipesID] = @original_RecipesID AND (([RecipeNum] = @original_RecipeNum) OR ([RecipeNum] IS NULL AND @original_RecipeNum IS NULL)) AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))" InsertCommand="INSERT INTO [Recipes] ([RecipesID], [RecipeNum], [RecipesName], [Instructions]) VALUES (@RecipesID, @RecipeNum, @RecipesName, @Instructions)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [RecipesID], [RecipeNum], [RecipesName], [Instructions] FROM [Recipes] WHERE ([RecipesID] = @RecipesID)" UpdateCommand="UPDATE [Recipes] SET [RecipeNum] = @RecipeNum, [RecipesName] = @RecipesName, [Instructions] = @Instructions WHERE [RecipesID] = @original_RecipesID AND (([RecipeNum] = @original_RecipeNum) OR ([RecipeNum] IS NULL AND @original_RecipeNum IS NULL)) AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))">
                 <DeleteParameters>
                     <asp:Parameter Name="original_RecipesID" Type="Int32" />
+                    <asp:Parameter Name="original_RecipeNum" Type="String" />
                     <asp:Parameter Name="original_RecipesName" Type="String" />
                     <asp:Parameter Name="original_Instructions" Type="String" />
                 </DeleteParameters>
                 <InsertParameters>
                     <asp:Parameter Name="RecipesID" Type="Int32" />
+                    <asp:Parameter Name="RecipeNum" Type="String" />
                     <asp:Parameter Name="RecipesName" Type="String" />
                     <asp:Parameter Name="Instructions" Type="String" />
                 </InsertParameters>
@@ -74,9 +73,11 @@
                     <asp:ControlParameter ControlID="gvRecipes" Name="RecipesID" PropertyName="SelectedValue" Type="Int32" />
                 </SelectParameters>
                 <UpdateParameters>
+                    <asp:Parameter Name="RecipeNum" Type="String" />
                     <asp:Parameter Name="RecipesName" Type="String" />
                     <asp:Parameter Name="Instructions" Type="String" />
                     <asp:Parameter Name="original_RecipesID" Type="Int32" />
+                    <asp:Parameter Name="original_RecipeNum" Type="String" />
                     <asp:Parameter Name="original_RecipesName" Type="String" />
                     <asp:Parameter Name="original_Instructions" Type="String" />
                 </UpdateParameters>
@@ -89,12 +90,12 @@
            <p>To enter a recipe, enter the information below and click the <strong>Add Recipes</strong> button.</p>
             
             <div class="form-group">
-                <asp:Label ID="lblRecipeID" runat="server" CssClass="col-xs-2"  Text="Recipe ID"></asp:Label>
+                <asp:Label ID="lblRecipeNum" runat="server" CssClass="col-xs-2"  Text="Recipe Number"></asp:Label>
              <div class="col-xs-3">
-                <asp:TextBox ID="txtID" runat="server" CssClass="form-control" MaxLength="10"></asp:TextBox>
+                <asp:TextBox ID="txtNum" runat="server" CssClass="form-control" MaxLength="10"></asp:TextBox>
               </div>
              <div class="col-xs-offset-1 col-xs-4">
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RecipeID is required:" ControlToValidate="txtID" CssClass="text-danger" ></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="A recipe number is required:" ControlToValidate="txtNum" CssClass="text-danger" ></asp:RequiredFieldValidator>
              </div>
          </div>
        
@@ -114,7 +115,7 @@
             <asp:TextBox ID="txtInstruction2" class="form-control" runat="server" Height="100" Width="200" Row="5" TextMode="MultiLine"></asp:TextBox>
                 </div>
             <div class="col-xs-offset-1 col-xs-4">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" CssClass="text-danger" ErrorMessage ="A discription is required:" ControlToValidate="txtInstruction2"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" CssClass="text-danger" ErrorMessage ="The instructions are required:" ControlToValidate="txtInstruction2"></asp:RequiredFieldValidator>
             </div>
         </div>
         

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
 using System.Data;
+using System.Data.SqlClient;
+using System.Web.UI.WebControls;
+
 
 
 namespace pantry_app
@@ -81,23 +77,23 @@ namespace pantry_app
             SqlConnection cn = null;
             try
             {
-                
-                sqlStmt = "insert into Recipes (RecipesID,RecipesName,Instructions) Values (@RecipesID,@RecipesNames,@Instructions)  ";
+
+                sqlStmt = "insert into Recipes (RecipesID,RecipesName,Instructions) Values (@Recipenum,@RecipesNames,@Instructions)  ";
                 conString = "PantryWiseDBConnectionString";
                 cn = new SqlConnection(conString);
                 SqlCommand cmd = new SqlCommand(sqlStmt, cn);
-                cmd.Parameters.Add(new SqlParameter("@RecipesID", SqlDbType.Int, 6));
+                cmd.Parameters.Add(new SqlParameter("@RecipeNum", SqlDbType.NVarChar, 50));
                 cmd.Parameters.Add(new SqlParameter("@RecipesName", SqlDbType.NVarChar, 50));
                 cmd.Parameters.Add(new SqlParameter("@Instructions", SqlDbType.NVarChar, 1000));
 
-                cmd.Parameters["@Recipes"].Value = txtID.Text;
-                cmd.Parameters["@RecipesName"].Value = txtName;
-                cmd.Parameters["@Instructions"].Value = txtInstruction2;
+                cmd.Parameters["@RecipeNum"].Value = txtNum.Text;
+                cmd.Parameters["@RecipesName"].Value = txtName.Text;
+                cmd.Parameters["@Instructions"].Value = txtInstruction2.Text;
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 Label1.Text = "Recipe added succesfully!";
-                
+
             }
             catch (Exception ex)
             {
@@ -113,7 +109,7 @@ namespace pantry_app
 
         protected void btClear_Click(object sender, EventArgs e)
         {
-            txtID.Text = "";
+            txtNum.Text = "";
             txtName.Text = "";
             txtInstruction2.Text = "";
         }
@@ -127,11 +123,11 @@ namespace pantry_app
         }
     }
 
-    
 
 
-    }
 
-        
+}
+
+
 
 

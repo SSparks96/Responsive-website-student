@@ -51,22 +51,22 @@ namespace pantry_app
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
 
         /// <summary>
-        /// lblRecipeID control.
+        /// lblRecipeNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRecipeID;
+        protected global::System.Web.UI.WebControls.Label lblRecipeNum;
 
         /// <summary>
-        /// txtID control.
+        /// txtNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtID;
+        protected global::System.Web.UI.WebControls.TextBox txtNum;
 
         /// <summary>
         /// RequiredFieldValidator1 control.
