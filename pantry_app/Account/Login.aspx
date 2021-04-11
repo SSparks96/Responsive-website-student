@@ -4,7 +4,7 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
-
+  <div class="jumbotron">
     <div class="row">
         <div class="col-md-8">
             <section id="loginForm">
@@ -62,4 +62,5 @@
             </section>
         </div>
     </div>
+</div>
 </asp:Content>

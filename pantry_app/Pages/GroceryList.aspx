@@ -3,8 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Testing for the Grocery List</h1>
      <div class="jumbotron">
-        <h2>Wecome to the Grocery list</h2>
-    </div>
+        <h2>Welcome to the Grocery list</h2>
+  
      <div class="row">
          <div class="col-sm-6 table-responsive">
      <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:PantryWiseDBConnectionString %>' SelectCommand="SELECT [category_name] FROM [groceryCategories] ORDER BY [category_name]"></asp:SqlDataSource>
@@ -16,7 +16,7 @@
               <asp:Button ID="addFoodToGroceryList" runat="server" Text="Add To List" CssClass="btn btn-primary" OnClick="addFoodToGroceryList_Click" />
          </div>
          </div>
-            <div class="jumbotron">
+           
         <h2>Everything in your list</h2>
     </div>
     <div class="col-sm-6 table-responsive">
