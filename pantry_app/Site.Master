@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
-    <link href="Content/StyleSheet1.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.4.1.intellisense.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <title><%: Page.Title %> - Welcome to our Pantry Application</title>
