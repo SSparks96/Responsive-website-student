@@ -51,22 +51,22 @@ namespace pantry_app
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
 
         /// <summary>
-        /// lblRecipeNum control.
+        /// lblRecipeID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRecipeNum;
+        protected global::System.Web.UI.WebControls.Label lblRecipeID;
 
         /// <summary>
-        /// txtNum control.
+        /// txtID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNum;
+        protected global::System.Web.UI.WebControls.TextBox txtID;
 
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -105,22 +105,22 @@ namespace pantry_app
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// Instruction control.
+        /// Description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Instruction;
+        protected global::System.Web.UI.WebControls.Label Description;
 
         /// <summary>
-        /// txtInstruction2 control.
+        /// txtDecription2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInstruction2;
+        protected global::System.Web.UI.WebControls.TextBox txtDecription2;
 
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -139,15 +139,6 @@ namespace pantry_app
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btAddRecipes;
-
-        /// <summary>
-        /// btClear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btClear;
 
         /// <summary>
         /// lblError control.
