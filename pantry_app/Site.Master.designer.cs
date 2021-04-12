@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pantry_app
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace pantry_app {
+    
+    
+    public partial class SiteMaster {
+        
         /// <summary>
         /// MainContent control.
         /// </summary>

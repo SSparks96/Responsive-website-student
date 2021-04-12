@@ -3,20 +3,14 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Recipes</h1>
     <div>
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-6 table-responsive">
-                <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-condensed" AllowPaging="True" AllowSorting="True" 
-                    AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="RecipesID"  OnPreRender="gvRecipes_PreRender" OnSelectedIndexChanged="gvRecipes_SelectedIndexChanged" >
-                    <AlternatingRowStyle BackColor="#3399FF" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" />
+        <div class="row">
+            <div class="col-xs-6">
+                <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-responsive" >
                     <Columns>
-                        <asp:BoundField DataField="RecipesID" HeaderText="RecipesID" SortExpression="RecipesID" ReadOnly="True" />
-                        <asp:BoundField DataField="RecipesName" HeaderText="RecipesName" SortExpression="RecipesName" />
-                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                        <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                        <asp:CommandField ShowEditButton="True" />
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowDeleteButton="True" />
                     </Columns>
-                    <HeaderStyle BackColor="Black" ForeColor="White" />
-                    <PagerStyle CssClass="pagerStyle" HorizontalAlign="Center" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" SelectCommand="SELECT [RecipesID], [RecipesName], [Description] FROM [Recipes]">
                 </asp:SqlDataSource>
@@ -108,7 +102,7 @@
          <div class="form-group">
             <asp:Label ID="lblRecipeName" runat="server" Text="Recipe Name" CssClass="col-xs-2" ></asp:Label>
          <div class="col-xs-3">
-            <asp:TextBox ID="txtName" runat="server" MaxLength="50" CssClass="form-control" ></asp:TextBox>
+            <asp:TextBox ID="txtName" runat="server" MaxLength="10" CssClass="form-control" ></asp:TextBox>
          </div>
             <div class="col-xs-offset-1 col-xs-4">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Recipe name is required:" CssClass="text-danger" ControlToValidate="txtName"></asp:RequiredFieldValidator>
@@ -123,13 +117,13 @@
             <div class="col-xs-offset-1 col-xs-4">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" CssClass="text-danger" ErrorMessage ="A discription is required:" ControlToValidate="txtDecription2"></asp:RequiredFieldValidator>
             </div>
-        </div>
         
-            <div class="col-xs-offset-2 col-xs-3">
-                <asp:Button ID="btAddRecipes" runat="server"  Text="Add Recipes"  CssClass="btn btn-primary" OnClick="btAddRecipes_Click" />
+        <div class="row">
+            <div class="col-xs-3">
+                <asp:Button ID="btAddRecipes" runat="server" Text="Add Recipes"  CssClass="btn btn-primary" OnClick="btAddRecipes_Click" />
             </div>
-        
-        
+        </div>
+        </div>
             
          <p>
             <asp:Label ID="lblError" runat="server" CssClass="text-danger" EnableViewState="False"></asp:Label>
@@ -140,7 +134,7 @@
 
      
     
-      
+
    </div>
 </div>
 </asp:Content>
