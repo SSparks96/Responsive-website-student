@@ -7,8 +7,8 @@
   
      <div class="row">
          <div class="col-sm-6 table-responsive">
-     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:PantryWiseDBConnectionString %>' SelectCommand="SELECT [category_name] FROM [groceryCategories] ORDER BY [category_name]"></asp:SqlDataSource>
-    <asp:DropDownList ID="groceryCategoryDdl" CssClass="btn btn-default dropdown-toggle" runat="server" DataSourceID="SqlDataSource1" DataTextField="category_name" DataValueField="category_name"></asp:DropDownList>
+     <asp:SqlDataSource runat="server" ID="SqlDataSource10" ConnectionString='<%$ ConnectionStrings:PantryWiseDBConnectionString %>' SelectCommand="SELECT [category_name] FROM [groceryCategories] ORDER BY [category_name]"></asp:SqlDataSource>
+    <asp:DropDownList ID="groceryCategoryDdl" CssClass="btn btn-default dropdown-toggle" runat="server" DataSourceID="SqlDataSource10" DataTextField="category_name" DataValueField="category_name"></asp:DropDownList>
     <asp:TextBox ID="nameTxt" runat="server" placeholder="Enter Item Name"></asp:TextBox>
     <asp:TextBox ID="quantityTxt" runat="server" placeholder="Enter Quantity"></asp:TextBox>
              </div>
