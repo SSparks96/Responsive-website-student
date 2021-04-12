@@ -8,18 +8,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/StyleSheet1.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.4.1.intellisense.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <title><%: Page.Title %> - Welcome to our Pantry Application</title>
-
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <style type="text/css">
+
+        .jumbotron {
+            background-color: lightblue;
+        }
+
+        .style1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 48pt;
+            font-weight: bold;
+            font-style: italic;
+            color: lightblue;
+        }
+
+         h1{
+		background-color:lightblue;
+		color:black;
+	    }
+
+        h2 {
+            background-color:lightblue;
+            color:black;
+            padding:10;
+        }
+        h6{
+            color: navy;
+        }
+
+      .body-headline{
+		padding: 10px;
+		background-color:#000;
+		color: black;
+		font-size:2em;
+	    }
+
+     
+      
+    </style>
+
 </head>
-<body>
+ <div style="background-image: url('/Images/dark pantry-01-walk-in-pantry.jpg')" >
+     <body>
     <form runat="server" class="form-horizontal">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -59,17 +99,36 @@
                         <li><a runat="server" href="~/Pages/GroceryList">Grocery List</a></li>
                         <li><a runat="server" href="~/Pages/Inventory">Inventory List</a></li>
                     </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
                 </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - The Best SE_II Class</p>
-            </footer>
+        
+           
         </div>
     </form>
 </body>
+ <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - The Best SE_II Class</p>
+            </footer>
+
+         </div>
 </html>
