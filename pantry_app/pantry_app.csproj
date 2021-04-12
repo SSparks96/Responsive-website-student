@@ -211,6 +211,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="Pages\SuggestedRecipes.aspx" />
     <Content Include="Pages\GroceryList.aspx" />
+    <Content Include=".editorconfig" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Pages\UserRegistration.aspx" />
     <Content Include="Scripts\bootstrap.js" />
