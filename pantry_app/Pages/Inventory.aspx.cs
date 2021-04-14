@@ -5,17 +5,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace pantry_app.Pages
+namespace pantry_app
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class WebForm4 : System.Web.UI.Page
     {
-        public object SqlDataSource2 { get; private set; }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-      }
-
+    }
 }
+
+
+
+
+
