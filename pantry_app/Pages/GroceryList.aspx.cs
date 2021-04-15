@@ -10,7 +10,7 @@ using System.Data;
 
 namespace pantry_app
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class WebForm3 : System.Web.UI.Page
     {
         string cs = ConfigurationManager.ConnectionStrings["PantryWiseDBConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
