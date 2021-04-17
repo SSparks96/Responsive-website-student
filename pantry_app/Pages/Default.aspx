@@ -24,7 +24,7 @@
             <asp:BulletedList ID="BulletedList2" runat="server" DataTextField="I " style="font-size: medium">
                 <asp:ListItem>sit amet, consectetuer adipiscing elit, sed diam nonummy nibe eating</asp:ListItem> </asp:BulletedList>
 
-             <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</strong></p>
+             <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat element.</strong></p>
 
             <strong>
 
