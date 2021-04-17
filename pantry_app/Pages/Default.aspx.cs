@@ -13,5 +13,10 @@ namespace pantry_app
         {
 
         }
+
+        protected void BulletedList2_Click(object sender, BulletedListEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,8 +7,8 @@
           <div class="row">
             <div class="col-xs-6 table-responsive">
                 <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-condensed" PageSize="5" AllowPaging="True" AllowSorting="True" 
-                    AutoGenerateColumns="False" DataSourceID="SqlDataSource1"  OnPreRender="gvRecipes_PreRender" OnSelectedIndexChanged="gvRecipes_SelectedIndexChanged" DataKeyNames="RecipesID" >
-                    <AlternatingRowStyle BackColor="#3399FF" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" />
+                    AutoGenerateColumns="False" DataSourceID="SqlDataSource1"  OnPreRender="gvRecipes_PreRender" OnSelectedIndexChanged="gvRecipes_SelectedIndexChanged" DataKeyNames="RecipesID" CellPadding="4" ForeColor="#333333" GridLines="None" >
+                    <AlternatingRowStyle BackColor="White" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" ForeColor="#284775" />
                     <Columns>
                         <asp:TemplateField HeaderText="RecipeNum" SortExpression="RecipeNum">
                             <EditItemTemplate>
@@ -36,9 +36,16 @@
                         </asp:TemplateField>
                         <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
                     </Columns>
-                    <HeaderStyle BackColor="Black" ForeColor="White" />
-                    <PagerStyle CssClass="pagerStyle" HorizontalAlign="Center"  />
-                    <PagerSettings Mode="NumericFirstLast"/>
+                    <EditRowStyle BackColor="#999999" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
+                    <PagerStyle CssClass="pagerStyle" HorizontalAlign="Center" BackColor="#284775" ForeColor="White"  />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" SelectCommand="SELECT [RecipeNum], [RecipesName], [Instructions], [RecipesID] FROM [Recipes] ORDER BY [RecipeNum]" OldValuesParameterFormatString="original_{0}" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Recipes] WHERE [RecipesID] = @original_RecipesID AND (([RecipeNum] = @original_RecipeNum) OR ([RecipeNum] IS NULL AND @original_RecipeNum IS NULL)) AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))" InsertCommand="INSERT INTO [Recipes] ([RecipeNum], [RecipesName], [Instructions], [RecipesID]) VALUES (@RecipeNum, @RecipesName, @Instructions, @RecipesID)" UpdateCommand="UPDATE [Recipes] SET [RecipeNum] = @RecipeNum, [RecipesName] = @RecipesName, [Instructions] = @Instructions WHERE [RecipesID] = @original_RecipesID AND (([RecipeNum] = @original_RecipeNum) OR ([RecipeNum] IS NULL AND @original_RecipeNum IS NULL)) AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))">
                     <DeleteParameters>
@@ -67,8 +74,11 @@
 
         <div class="col-xs-5">
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="175px" AutoGenerateRows="False" DataKeyNames="RecipesID" DataSourceID="SqlDataSource2"
-                 CssClass="table table-condensed table-bordered table-striped" OnItemDeleted="DetailsView1_ItemDeleted" OnItemUpdated="DetailsView1_ItemUpdated" OnItemInserted="DetailsView1_ItemInserted" AlternatingRowStyle-BackColor="Black" BorderStyle="Solid" BorderWidth="2px">
-                <AlternatingRowStyle BackColor="Silver" BorderColor="Black" BorderStyle="Inset" ForeColor="#0066FF"></AlternatingRowStyle>
+                 CssClass="table table-condensed table-bordered table-striped" OnItemDeleted="DetailsView1_ItemDeleted" OnItemUpdated="DetailsView1_ItemUpdated" OnItemInserted="DetailsView1_ItemInserted" AlternatingRowStyle-BackColor="Black" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" BorderColor="Black" BorderStyle="Inset" ForeColor="#284775"></AlternatingRowStyle>
+                <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
+                <EditRowStyle BackColor="#999999" />
+                <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
                 <Fields>
                     <asp:TemplateField HeaderText="RecipeNum" SortExpression="RecipeNum">
                         <EditItemTemplate>
@@ -105,7 +115,10 @@
                     </asp:TemplateField>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 </Fields>
-                <HeaderStyle BackColor="Black" ForeColor="White" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
             </asp:DetailsView>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" DeleteCommand="DELETE FROM [Recipes] WHERE [RecipesID] = @original_RecipesID AND (([RecipeNum] = @original_RecipeNum) OR ([RecipeNum] IS NULL AND @original_RecipeNum IS NULL)) AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))" InsertCommand="INSERT INTO [Recipes]  [RecipeNum], [RecipesName], [Instructions]) VALUES ( @RecipeNum, @RecipesName, @Instructions)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [RecipesID], [RecipeNum], [RecipesName], [Instructions] FROM [Recipes] WHERE ([RecipesID] = @RecipesID)" UpdateCommand="UPDATE [Recipes] SET [RecipeNum] = @RecipeNum, [RecipesName] = @RecipesName, [Instructions] = @Instructions WHERE [RecipesID] = @original_RecipesID AND (([RecipeNum] = @original_RecipeNum) OR ([RecipeNum] IS NULL AND @original_RecipeNum IS NULL)) AND (([RecipesName] = @original_RecipesName) OR ([RecipesName] IS NULL AND @original_RecipesName IS NULL)) AND (([Instructions] = @original_Instructions) OR ([Instructions] IS NULL AND @original_Instructions IS NULL))">
                 <DeleteParameters>
@@ -136,9 +149,10 @@
            </div>
          </div>
         </div>
-        
+      
         <div class="col-xs-12">
-           <p>To enter a recipe, enter the information below and click the <strong>Add Recipes</strong> button.</p>
+          <div class="jumbotron">  
+             <p>To enter a recipe, enter the information below and click the <strong>Add Recipes</strong> button.</p>
             
             <div class="form-group">
                 <asp:Label ID="lblRecipeNum" runat="server" CssClass="col-xs-2"  Text="Recipe Number"></asp:Label>
@@ -178,7 +192,7 @@
                 <asp:Button ID="btClear" runat="server" Text="Clear" CssClass="btn btn-primary" OnClick="btClear_Click" CausesValidation="False" />
             </div>
         </div>
-       
+       </div>
         <p>
            <asp:Label ID="lblError" runat="server" CssClass="text-danger" EnableViewState="False"></asp:Label>
         </p>
@@ -188,5 +202,5 @@
 
      </div>
 </div>
-
+</div>
 </asp:Content>
