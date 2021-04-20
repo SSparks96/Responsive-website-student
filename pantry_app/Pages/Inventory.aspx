@@ -16,6 +16,9 @@
                 <asp:TextBox ID="QuanityTextBox" runat="server" Text='<%# Bind("Quanity") %>' />
           
                 <br />
+
+
+
                 Description:
                 <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
                 <br />
@@ -187,8 +190,6 @@
                 <asp:Parameter Name="InventoryID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-
-
 
     </asp:Content>
 

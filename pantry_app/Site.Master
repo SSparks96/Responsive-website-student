@@ -74,7 +74,7 @@
 
 </head>
   <body>
-     <div style="background-image: url('/Images/dark pantry-01-walk-in-pantry.jpg')" >
+     <div style="background-position: center center; background-image: url('../Images/annie-spratt-WxiblgUeQpM-unsplash.jpg'); background-repeat: no-repeat; background-attachment: fixed;" >
     <form runat="server" class="form-horizontal">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -142,9 +142,10 @@
     </form>
   </div>
 </body>
+
  <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - The Best SE_II Class</p>
-            </footer>
+ </footer>
 
- 
+    
 </html>
