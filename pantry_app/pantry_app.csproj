@@ -174,14 +174,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\img8.jpg" />
-    <Content Include="Images\img4.jpg" />
-    <Content Include="Images\img1.jpg" />
-    <Content Include="Images\img2.jpg" />
-    <Content Include="Images\img3.jpg" />
-    <Content Include="Images\img5.jpg" />
-    <Content Include="Images\img6.jpg" />
-    <Content Include="Images\img7.jpg" />
+    <Content Include="Images\dark pantry-01-walk-in-pantry.jpg" />
     <Content Include="Pages\Ingredients.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -364,6 +357,13 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Pages\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\grdCategories.cs" />
     <Compile Include="Pages\Ingredients.aspx.cs">
       <DependentUpon>Ingredients.aspx</DependentUpon>
