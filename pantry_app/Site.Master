@@ -31,7 +31,8 @@
             background-color: lightblue;
         }
         .jumbotron2 {
-            background-color:coral
+            background-color:lightblue;
+           
         }
        
         .style1{
@@ -74,7 +75,7 @@
 
 </head>
   <body>
-     <div style="background-position: center center; background-image: url('../Images/annie-spratt-WxiblgUeQpM-unsplash.jpg'); background-repeat: no-repeat; background-attachment: fixed;" >
+     <div style="background-image: url('../Images/dark pantry-01-walk-in-pantry.jpg'); " >
     <form runat="server" class="form-horizontal">
         <asp:ScriptManager runat="server">
             <Scripts>
