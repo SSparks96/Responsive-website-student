@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <Imageurl>~/images/img1.jpg</Imageurl>
+  </Ad>
+  <Ad>
+    <Imageurl>~/images/img2.jpg</Imageurl>
+  </Ad>
+  <Ad>
+    <Imageurl>~/images/img3.jpg</Imageurl>
+  </Ad>
+  <Ad>
+    <Imageurl>~/images/img4.jpg</Imageurl>
+  </Ad>
+  <Ad>
+    <Imageurl>~/images/img5.jpg</Imageurl>
+  </Ad>
+  <Ad>
+    <Imageurl>~/images/img6.jpg</Imageurl>
+  </Ad>
+  <Ad>
+    <Imageurl>~/images/img7.jpg</Imageurl>
+  </Ad>
+  <Ad>
+    <Imageurl>~/images/dark pantry-01-walk-in-pantry.jpg</Imageurl>
+  </Ad>
+ </Advertisements>

@@ -11,6 +11,24 @@ namespace pantry_app
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                SetImageUrl();
+            }
+        }
+
+        private void SetImageUrl()
+        {
+           
+            Random _rand = new Random();
+         
+            int i = _rand.Next(1, 16);
+
+            Image1.ImageUrl = "~/Images/" + i.ToString() + ".jpg";
+        }
+
+        protected void BulletedList2_Click(object sender, BulletedListEventArgs e)
+        {
 
         }
     }

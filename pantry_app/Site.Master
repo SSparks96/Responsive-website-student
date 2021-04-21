@@ -18,8 +18,63 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <style type="text/css">
+
+        @viewport {
+         width: device-width ;
+         zoom: 1.0 ;
+        }
+        @-ms-viewport {
+        width: device-width ;
+        }
+        .jumbotron {
+            background-color: lightblue;
+        }
+        .jumbotron2 {
+            background-color:coral
+        }
+       
+        .style1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 48pt;
+            font-weight: bold;
+            font-style: italic;
+            color: lightblue;
+        }
+        .style2 {
+            padding: 15px;
+            background-size: 50px, 130px, auto;
+        }
+
+         h1{
+		background-color:lightblue;
+		color:black;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+	    }
+
+        h2 {
+            background-color:lightblue;
+            color:black;
+            padding:10; 
+        }
+        h6{
+            color: navy;
+        }
+
+      .body-headline{
+		padding: 10px;
+		background-color:#000;
+		color: black;
+		font-size:2em;
+	    }
+
+
+      
+    </style>
+
 </head>
-<body>
+  <body>
+     <div style="background-position: center center; background-image: url('../Images/annie-spratt-WxiblgUeQpM-unsplash.jpg'); background-repeat: no-repeat; background-attachment: fixed;" >
     <form runat="server" class="form-horizontal">
         <asp:ScriptManager runat="server">
             <Scripts>
