@@ -27,7 +27,6 @@
                 <asp:CommandField ShowSelectButton="True"></asp:CommandField>
             </Columns>
         </asp:GridView>
-        <asp:Button ID="testing" runat="server" Text="testing to see if it fixed the merge issue" />
      </div>
 
     </asp:Content>
