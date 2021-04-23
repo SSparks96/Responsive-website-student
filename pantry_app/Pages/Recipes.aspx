@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <h1 style="background-color:coral; background-blend-mode:lighten; border-block-color:lightblue; border-style:groove">Recipes</h1>
+    <h1 style="background-color:coral; background-blend-mode:lighten; border-block-color:lightblue; border-style: outset;">Recipes</h1>
     <div>
         <div class="row form-group">
           <div class="col-xs-12 table-responsive">
@@ -80,7 +80,7 @@
             </p>
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="175px" AutoGenerateRows="False" DataKeyNames="RecipesID" DataSourceID="SqlDataSource2"
                  CssClass="table table-condensed table-bordered table-striped" OnItemDeleted="DetailsView1_ItemDeleted" OnItemUpdated="DetailsView1_ItemUpdated" OnItemInserted="DetailsView1_ItemInserted" AlternatingRowStyle-BackColor="Black" BorderStyle="Solid" BorderWidth="2px">
-                <AlternatingRowStyle BackColor="Silver" BorderColor="Black" BorderStyle="Inset" ForeColor="#0066FF"></AlternatingRowStyle>
+                <AlternatingRowStyle BackColor="Silver" BorderColor="Black" BorderStyle="Inset" ForeColor="#2582B3"></AlternatingRowStyle>
                 <Fields>
                     <asp:BoundField DataField="RecipesID" HeaderText="Recipe ID" InsertVisible="False" ReadOnly="True" SortExpression="RecipesID" />
                     <asp:TemplateField HeaderText="Recipe Name" SortExpression="RecipesName">
