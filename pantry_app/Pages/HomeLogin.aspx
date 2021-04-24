@@ -54,8 +54,8 @@
         <div class="form-group">
             <asp:Button ID="loginBtn" runat="server" Text="Login" CssClass="btn btn-primary btn-block" OnClick="loginBtn_Click1" />
         </div>
-        <div class="clearfix">
-            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+        <div class="inline">       
+            <asp:CheckBox ID="rememberme" runat="server" Text="Remember Me" />
             <a href="/Pages/ForgotPassword" class="float-right">Forgot Password?</a>
         </div> 
         <div class="form-group">
