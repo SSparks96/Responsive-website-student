@@ -25,11 +25,48 @@ namespace pantry_app
             int i = _rand.Next(1, 16);
 
             Image1.ImageUrl = "~/Images/" + i.ToString() + ".jpg";
+            if (!IsPostBack)
+            {
+                SetImageUrl();
+            }
+            if (!IsPostBack)
+            {
+                SetImageUrl();
+            }
         }
 
-        protected void BulletedList2_Click(object sender, BulletedListEventArgs e)
+        private void SetImageUrl()
         {
+           
+            Random _rand = new Random();
+         
+            int i = _rand.Next(1, 16);
+
+            Image1.ImageUrl = "~/Images/" + i.ToString() + ".jpg";
+        }
+
+        private void SetImageUrl()
+ 
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+           
+            Random _rand = new Random();
+         
+            int i = _rand.Next(1, 16);
+
+            Image1.ImageUrl = "~/Images/" + i.ToString() + ".jpg";
+        }
+
+ 
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            SetImageUrl();
+            SetImageUrl();
+        }
 
         }
+
+    }
+}
     }
 }
