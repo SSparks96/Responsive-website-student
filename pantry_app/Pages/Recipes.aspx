@@ -9,7 +9,7 @@
             <asp:GridView ID="gvRecipes" runat="server" class="table table-bordered table-striped table-condensed" PageSize="5" AllowPaging="True" AllowSorting="True" 
                     AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnPreRender="gvRecipes_PreRender"  DataKeyNames="RecipesID"
                      OnRowDeleted="grRecipes_RowDeleted" OnRowUpdated="grRecipes_RowUpdated" >
-                    <AlternatingRowStyle BackColor="#3399FF" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" />
+                    <AlternatingRowStyle BackColor="#2582B3" ForeColor="Black" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" />
                     <Columns>
                         <asp:BoundField DataField="RecipesID" HeaderText="Recipes ID" InsertVisible="False" ReadOnly="True" SortExpression="RecipesID" HeaderStyle-CssClass="text-center" ControlStyle-CssClass="col-xs-1" >
                         </asp:BoundField>
@@ -37,7 +37,7 @@
                                 <asp:Label ID="lblInstructions" CssClass="form-label"  runat="server" Text='<%# Bind("Instructions") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:CommandField ButtonType="Button" ShowEditButton="True" />
+                        <asp:CommandField ButtonType="Button"  ShowEditButton="True" />
                         <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
                     </Columns>
                     <AlternatingRowStyle CssClass="alt-row"/>
@@ -80,7 +80,7 @@
             </p>
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="175px" AutoGenerateRows="False" DataKeyNames="RecipesID" DataSourceID="SqlDataSource2"
                  CssClass="table table-condensed table-bordered table-striped" OnItemDeleted="DetailsView1_ItemDeleted" OnItemUpdated="DetailsView1_ItemUpdated" OnItemInserted="DetailsView1_ItemInserted" AlternatingRowStyle-BackColor="Black" BorderStyle="Solid" BorderWidth="2px">
-                <AlternatingRowStyle BackColor="Silver" BorderColor="Black" BorderStyle="Inset" ForeColor="#2582B3"></AlternatingRowStyle>
+                <AlternatingRowStyle BackColor="#2582B3" BorderColor="Black" BorderStyle="Inset" ForeColor="White"></AlternatingRowStyle>
                 <Fields>
                     <asp:BoundField DataField="RecipesID" HeaderText="Recipe ID" InsertVisible="False" ReadOnly="True" SortExpression="RecipesID" />
                     <asp:TemplateField HeaderText="Recipe Name" SortExpression="RecipesName">
