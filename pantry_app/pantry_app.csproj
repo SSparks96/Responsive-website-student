@@ -195,6 +195,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Pages\Inventory.aspx" />
     <Content Include="Pages\HomeLogin.aspx" />
+    <Content Include="Pages\RecipePage.css" />
     <Content Include="Pages\Recipes.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
