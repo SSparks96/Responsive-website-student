@@ -38,7 +38,6 @@
                <SortedDescendingCellStyle BackColor="#FFFDF8" />
                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
-        <asp:Button ID="testing" runat="server" Text="testing to see if it fixed the merge issue" />
      </div>
 
     </asp:Content>

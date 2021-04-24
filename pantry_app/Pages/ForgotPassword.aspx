@@ -39,23 +39,29 @@
 <body>
 <div class="login-form">
     <form runat="server">
-        <h2 class="text-center">Welcome</h2> 
-        <h2 class="text-center">Use this to recover your password</h2>       
-        <div class="form-group">
-        </div>
-        <div class="form-group">
-        </div>
-        <div class="form-group">
-        </div>
+        <h3 class="text-center">Welcome</h3> 
+        <h4 class="text-center">Use this to recover your password</h4>       
+
         <div class="clearfix">
-            &nbsp;
-        </div> 
         <div class="form-group">
-            <asp:PasswordRecovery ID="PasswordRecovery1" runat="server"></asp:PasswordRecovery>
-        
+            <asp:TextBox ID="ForgotPasswordlTxt" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" Text="Show Password" CssClass="btn btn-primary btn-block" OnClick="Button1_Click" />
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="281px">
+                <Columns>
+                    <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+                </Columns>
+            </asp:GridView>
+            <asp:Button ID="Button2" runat="server" CssClass="btn btn-danger btn-block" Text="Return to the login screen" OnClick="Button2_Click" />
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" SelectCommand="SELECT DISTINCT [Password] FROM [UserRegistration] WHERE ([Email] = @Email)">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="ForgotPasswordlTxt" DefaultValue="null" Name="Email" PropertyName="Text" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+        </div>
         </div>
     </form>
-  
-</div>
+    </div>
+    <p>
+        &nbsp;</p>
 </body>
 </html>
