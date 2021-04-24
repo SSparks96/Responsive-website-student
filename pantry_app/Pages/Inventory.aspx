@@ -4,7 +4,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    <span class="style1"></span><br />
-    <h2>Inventory</h2>
+    <h2 style="width: 1091px">Inventory</h2>
     <p>
         <asp:FormView ID="FormView1" runat="server" AllowPaging="True" CellPadding="4" DataKeyNames="InventoryID" DataSourceID="SqlDataSource3" ForeColor="#333333">
             <EditItemTemplate>
@@ -17,9 +17,7 @@
                 Quanity:
                 <asp:TextBox ID="QuanityTextBox" runat="server" Text='<%# Bind("Quanity") %>' />
                 <br />
-                UserID:
-                <asp:TextBox ID="UserIDTextBox" runat="server" Text='<%# Bind("UserID") %>' />
-                <br />
+                
                 Description:
                 <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
                 <br />
@@ -48,9 +46,7 @@
                 Quanity:
                 <asp:TextBox ID="QuanityTextBox" runat="server" Text='<%# Bind("Quanity") %>' />
                 <br />
-                UserID:
-                <asp:TextBox ID="UserIDTextBox" runat="server" Text='<%# Bind("UserID") %>' />
-                <br />
+                
                 Description:
                 <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
                 <br />
@@ -76,9 +72,7 @@
                 Quanity:
                 <asp:Label ID="QuanityLabel" runat="server" Text='<%# Bind("Quanity") %>' />
                 <br />
-                UserID:
-                <asp:Label ID="UserIDLabel" runat="server" Text='<%# Bind("UserID") %>' />
-                <br />
+                
                 Description:
                 <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Bind("Description") %>' />
                 <br />
@@ -130,7 +124,7 @@
         
         
         <asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="True" 
-                            DataSourceID="SqlDataSource5" DataTextField="CategoryName" DataValueField="CategoryID" CssClass="form-control" Height="65px" Width="1092px">
+                            DataSourceID="SqlDataSource5" DataTextField="CategoryName" DataValueField="CategoryID" CssClass="form-control"  Width="1092px">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:PantryWiseDBConnectionString %>" 
                             SelectCommand="SELECT [CategoryID], [CategoryName] FROM [Category] ORDER BY [CategoryName]">
@@ -144,7 +138,7 @@
     <p>
         
         <asp:GridView ID="grdCategories" runat="server" AutoGenerateColumns="False" DataKeyNames="InventoryID" 
-                      DataSourceID="SqlDataSource2" CssClass="table table-bordered table-condensed table-hover" AllowPaging="True" AllowSorting="True" Height="227px" Width="1092px"  
+                      DataSourceID="SqlDataSource2" CssClass="table table-bordered table-condensed table-hover" AllowPaging="True" AllowSorting="True"  Width="1092px"  
                         >
 
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />

@@ -19,13 +19,24 @@
         <h2>Everything in your list</h2>
     </div>
     <div class="col-sm-6 table-responsive">
-           <asp:GridView ID="GroceryListTable" runat="server" AutoGenerateColumns="False" AllowSorting="True" Width="542px">
+           <asp:GridView ID="GroceryListTable" runat="server" AutoGenerateColumns="False" AllowSorting="True" Width="542px" CellPadding="4" ForeColor="#333333" GridLines="None">
+               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:BoundField DataField="category_name" HeaderText="Food Category" SortExpression="category_name"></asp:BoundField>
                 <asp:BoundField DataField="item_name" HeaderText="Pantry Item" SortExpression="item_name"></asp:BoundField>
                 <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity"></asp:BoundField>
                 <asp:CommandField ShowSelectButton="True"></asp:CommandField>
             </Columns>
+               <EditRowStyle BackColor="#999999" />
+               <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+               <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+               <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+               <SortedAscendingCellStyle BackColor="#E9E7E2" />
+               <SortedAscendingHeaderStyle BackColor="#506C8C" />
+               <SortedDescendingCellStyle BackColor="#FFFDF8" />
+               <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
         <asp:Button ID="testing" runat="server" Text="testing to see if it fixed the merge issue" />
      </div>
