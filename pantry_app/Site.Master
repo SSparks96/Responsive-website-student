@@ -55,7 +55,7 @@
 	    }
 
         h2 {
-            background-color:lightblue;
+            background-color:coral;
             color:black;
             padding:10; 
         }
