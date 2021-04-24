@@ -13,8 +13,6 @@
                 <ContentTemplate>  
                 <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick"></asp:Timer>  
                 <asp:Image ID="Image1" width="702px" Height="497px" runat="server" style="margin-left: 62px" />  
-               <p style="width: 659px; margin-left: 198px">
-                   &nbsp;</p>     
 
                </ContentTemplate>       
             </asp:UpdatePanel> 
@@ -34,21 +32,7 @@
                    <p style="width: 659px; margin-left: 59px">
                    Pantry Wise App</p>
                     <p style="width: 659px; margin-left: 61px">
-                   <span>Pantry wise is a pantry and fridge organizer, Inventory tracker, grocery list and recipe ideas app accessable only by entering a username and password to safeguard privacy. Pantry wise app saves time and money, can&#39;t miss products while shopping and minimize food wastage through Inventory check. Simply categorize your kitchen into panty or fridge foods or supplies and expiration date.&nbsp; Create and add a recipe and Enjoy a healthy recipe based on your interest. Picture your favorite cooking or products and share in your social media sites.<p></p>
-                   </span>
-                   <p>
-                   </p>
-                   <p class="MsoNormal">
-                       &nbsp;</p>
-                   <p class="MsoNormal">
-                       <span>
-                       <p>
-                           &nbsp;</p>
-                       </span>
-                       <p>
-                       </p>
-                
-                </asp:Panel>
+                   <span>Pantry wise is a pantry and fridge organizer, Inventory tracker, grocery list and recipe ideas app accessable only by entering a username and password to safeguard privacy. Pantry wise app saves time and money, can&#39;t miss products while shopping and minimize food wastage through Inventory check. Simply categorize your kitchen into panty or fridge foods or supplies and expiration date.&nbsp; Create and add a recipe and Enjoy a healthy recipe based on your interest. Picture your favorite cooking or products and share in your social media sites.</span><span></span></asp:Panel>
           
     </div> 
 
