@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
      
     <div class="jumbotron">
-        <h1 style="text-align: center">Welcome To the Pantry Wise!</h1>
+        <h1 style="text-align: center">Welcome To the Pantry Wise!!</h1>
     </div>
       
    <div class="jumbotron">  
