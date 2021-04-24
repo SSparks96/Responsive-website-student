@@ -8,15 +8,32 @@
       
    <div class="jumbotron">  
      <div class="row"> 
-         <asp:UpdatePanel ID="UpdatePanel1" runat="server">  
-           <ContentTemplate>  
-        <asp:Timer ID="Timer1" runat="server" Interval="3000" OnTick="Timer1_Tick"></asp:Timer>  
-        <asp:Image ID="Image1" width="702px" Height="497px" runat="server" style="margin-left: 199px" />  
+         <div class="column left" style="width: 78%">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">  
+                <ContentTemplate>  
+                <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick"></asp:Timer>  
+                <asp:Image ID="Image1" width="702px" Height="497px" runat="server" style="margin-left: 62px" />  
                <p style="width: 659px; margin-left: 198px">
-                   &nbsp;</p>
-               <p style="width: 659px; margin-left: 198px">
+                   &nbsp;</p>     
+
+               </ContentTemplate>       
+            </asp:UpdatePanel> 
+          </div>
+          <div class="column right" style="width: 15%">
+                    <p style="color: #FFFFFF; background-color: #000080; text-align: center; width: 212px;">
+                        Create the kitchen of your dreams!</p>
+                    <p style="color: #FFFFFF; background-color: #000080; width: 215px;"> “The kitchen is the heart of every home, for the most part. It evokes memories of your family history.”&nbsp; Debi Mazar </p>
+                    <p style="color: #FFFFFF; background-color: #000080; width: 215px;"> “If you can organise your kitchen, you can organise your life.” – Louis Parrish&nbsp;</p>
+                    <p style="color: #FFFFFF; background-color: #000080; width: 215px;"> “Cooking is one of the strongest ceremonies for life.” – Laura Esquivel&nbsp;</p>
+                    
+          </div>
+     </div>
+
+            
+                <asp:Panel ID="Panel1" runat="server">
+                   <p style="width: 659px; margin-left: 59px">
                    Pantry Wise App</p>
-               <p style="width: 659px; margin-left: 198px">
+                    <p style="width: 659px; margin-left: 61px">
                    <span>Pantry wise is a pantry and fridge organizer, Inventory tracker, grocery list and recipe ideas app accessable only by entering a username and password to safeguard privacy. Pantry wise app saves time and money, can&#39;t miss products while shopping and minimize food wastage through Inventory check. Simply categorize your kitchen into panty or fridge foods or supplies and expiration date.&nbsp; Create and add a recipe and Enjoy a healthy recipe based on your interest. Picture your favorite cooking or products and share in your social media sites.<p></p>
                    </span>
                    <p>
@@ -30,13 +47,11 @@
                        </span>
                        <p>
                        </p>
-                   </p>
-               </p>
-         </ContentTemplate>       
-   </asp:UpdatePanel>  
-           
+                
+                </asp:Panel>
+          
     </div> 
-  </div> 
+
        <asp:Panel ID="Panel2" runat="server" Height="46px">
                 <ul class="list-inline" style="height: 99px; margin-top: 29;">
           <li>
